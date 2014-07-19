@@ -9,25 +9,15 @@ Make rails 4.0 log details more colorful.
 
 There are plenty of logging frameworks for making tags (like timestamp, log
 level, etc.) more colorful - but what about the details in the line of text?
-What about the HTTP method used to make the request? What about the times.
+What about the HTTP method used to make the request? What about the render times?
 
-## Installation
+Shog converts the raw unformatted logs like this
 
-Add this line to your application's Gemfile:
+![Plain Logs](docs/images/plain.png)
 
-    gem 'shog'
+into easy to ready and process logs like this
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install shog
-
-## Usage
-
-TODO: Write usage instructions here
+![Shogged Logs](docs/images/shogged.png)
 
 ## Contributing
 
