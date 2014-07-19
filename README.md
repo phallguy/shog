@@ -20,6 +20,36 @@ become easy to ready and process logs like this
 
 ![Shogged Logs](docs/images/shogged.png)
 
+## Using Shog
+
+Just add the following to your Gemfile to enable shiny output logs.
+
+```
+gem 'shog'
+```
+
+Shog comes built in with some sane defaults for rails apps. But you can
+customize the output  to match additional log message by your app, or to use
+different options in production.
+
+To change the defaults, add `shog.rb` to your `config/initializers` folder
+
+```ruby
+Shog.configure do
+  if ::Rails.env.production?
+    reset_config!
+    timestamp
+  end
+
+  match /execution expired/ do |msg,matches|
+    # Highlight timeout errors
+    msg.red
+  end
+end
+```
+
+See [Shog::Formatter#configure](lib/shog/formatter.rb) for more configuration options.
+
 ## Contributing
 
 1. Fork it ( https://github.com/phallguy/shog/fork )
