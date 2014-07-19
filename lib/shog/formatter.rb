@@ -79,10 +79,10 @@ module Shog
     # @param [Float] expected maximum amount of time it should have taken.
     # @return [String] the formatted time.
     def format_time( time, expected = 30 )
-      timef = time.to_f
+      timef = time.uncolorize.to_f
       case
-      when timef > expected * 2 then time.to_s.red
-      when timef > expected     then time.to_s.yellow
+      when timef > expected * 2 then time.to_s.uncolorize.red
+      when timef > expected     then time.to_s.uncolorize.yellow
       else time
       end
     end
@@ -161,7 +161,7 @@ module Shog
     # Resets any previously configured formatting settings.
     # @return [Formatter] self.
     def reset_config!
-      @configuration ||= {
+      @configuration = {
         severity_tags: {},
         severities: {},
         matchers: {},

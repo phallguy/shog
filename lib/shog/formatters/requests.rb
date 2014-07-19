@@ -13,13 +13,13 @@ module Shog
           # Highlight HTTP request methods
           match /Started\s+(?<method>PUT|PATCH|GET|POST|DELETE)\s+(?<path>"[^"]*")[^\d\.]+(?<ip>[\d\.]+)(?<time>.*)/ do |msg,match|
             # http://refiddle.com/ge6
-            "#{match["method"].ljust 6} ".green.bold + " #{match["path"]} ".white.bold + " for " + "#{match["ip"]}".yellow + " #{match["time"]}".black.bold
+            "#{match["method"].ljust 6} ".green.bold + " #{match["path"]} ".white.bold + " for " + "#{match["ip"]}".yellow + " #{match["time"]}".black
           end
 
           # Dim detailed info about rendering views
           match /\s*Rendered\s+(?<view>[^\s]+)\swithin\s(?<layout>[^\s]+)\s\((?<time>.*)\)/ do |msg,match|
             # http://refiddle.com/18qr
-            "  Rendered #{ match["view"] } within ".black + match["layout"].black.bold + " " + format_time( match['time'].black )
+            "  Rendered #{ match["view"].bold }".black + " within ".black + match["layout"].black.bold + " " + format_time( match['time'].black )
           end
 
           # Highlight the final rendered response
@@ -34,7 +34,7 @@ module Shog
             parts << match['friendly'].yellow
             parts << 'in'
             parts << format_time( match['time'], 250 )
-            parts << match['details']
+            parts << match['details'].black
 
             parts.join(" ")
           end
@@ -47,9 +47,6 @@ module Shog
 
         end
       end
-
-
-
 
     end
   end
