@@ -1,0 +1,7 @@
+--protected
+--no-private
+--no-cache
+--hide-void-return
+--output-dir /tmp/shog_docs
+--db /tmp/shog_yardoc
+--markup markdown

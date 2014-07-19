@@ -1,0 +1,62 @@
+Style/LineLength:
+  Max: 120
+
+Style/AccessModifierIndentation:
+  EnforceStyle: indent
+
+Style/IndentationConsistency:
+  Enabled: false
+
+Style/TrailingBlankLines:
+  Enabled: false
+
+Style/EmptyLinesAroundBody:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SpaceInsideParens:
+  Enabled: false
+
+Style/SpaceBeforeBlockBraces:
+  Enabled: false
+
+Style/SpaceInsideBlockBraces:
+  Enabled: false
+
+Style/SpaceInsideBrackets:
+  Enabled: false
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+
+Style/TrailingComma:
+  Enabled: false
+
+Style/SpaceAfterComma:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  '{}'
+    '%i': '{}'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': '{}'
+    '%w': '{}'
+    '%W': '{}'
+    '%x': '{}'
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/AmbiguousRegexpLiteral:
+  Enabled: false

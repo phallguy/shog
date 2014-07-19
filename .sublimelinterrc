@@ -1,0 +1,14 @@
+{
+  "source": "http://sublimelinter.readthedocs.org/en/latest/index.html",
+  "linters": {
+    "rubocop" : {
+      "args" : [
+        "-R"
+      ]
+    },
+    "annotations" : {
+      "warnings": ["TODO", "README"],
+      "errors": ["FIXME", "HACK", "OMG!", "HERE BE DRAGONS" ]
+    }
+  }
+}
