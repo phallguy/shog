@@ -17,21 +17,24 @@ module Shog
           end
 
           # Dim detailed info about rendering views
-          match /\s*Rendered\s+(?<view>[^\s]+)\swithin\s(?<layout>[^\s]+)\s\((?<time>.*)\)/ do |msg,match|
+          match /\s*Rendered\s+(?<view>[^\s]+)\s(within\s(?<layout>[^\s]+)\s)?\((?<time>.*)\)/ do |msg,match|
             # http://refiddle.com/18qr
-            "  Rendered #{ match["view"].bold }".black + " within ".black + match["layout"].black.bold + " " + format_time( match['time'].black )
+            parts = ["  Rendered #{ match["view"].bold }".black]
+            parts << "within ".black + match["layout"].black.bold if match['layout']
+            parts << format_time( match['time'].black, 50 )
+            parts.join " "
           end
 
           # Highlight the final rendered response
           match /\s*Completed\s(?<code>\d+)\s(?<friendly>.*)\sin\s(?<time>\d+[^\s]*)\s(?<details>.*)/ do |msg,match|
             # http://refiddle.com/18qq
             parts = [ "Completed" ]
+            status = "#{match['code']} #{match['friendly']}"
             parts <<  case match['code'].to_i
-                      when 200..399 then match['code'].green
-                      when 400..499 then match['code'].yellow
-                      else               match['code'].red
+                      when 200..399 then status.green
+                      when 400..499 then status.yellow
+                      else               status.red
                       end
-            parts << match['friendly'].yellow
             parts << 'in'
             parts << format_time( match['time'], 250 )
             parts << match['details'].black
@@ -42,7 +45,7 @@ module Shog
           # Highlight the controller and action responding to the request
           match /Processing by (?<controller>[^\s]*) as (?<format>.*)/ do |msg,match|
             # http://refiddle.com/18qs
-            "Processing by #{match['controller'].magenta.bold} as #{match['format'].yellow}"
+            "===".magenta + " Processing by #{match['controller'].magenta} as #{match['format'].yellow}"
           end
 
         end
