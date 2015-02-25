@@ -9,6 +9,6 @@ module Shog
   # Set up formatting options for the default rails logger.
   # @see Shog::Formatter#configure
   def self.configure(&block)
-    ::Rails.logger.formatter.configure &block
+    ::Rails.logger.formatter = Shog::Formatter.new.configure &block
   end
 end
