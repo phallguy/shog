@@ -72,7 +72,7 @@ module Shog
     # Formats a time value expressed in ms, adding color to highlight times
     # outside the expected range.
     #
-    # If `time` is more thatn `expected` it's highligted yellow. If it's more
+    # If `time` is more than `expected` it's highlighted yellow. If it's more
     # than double it's highlighted red.
     #
     # @param [String] time in ms.

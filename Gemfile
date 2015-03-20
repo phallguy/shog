@@ -4,13 +4,12 @@ source 'https://rubygems.org'
 gemspec
 
 
-gem 'guard', '~> 2.6.1'
+gem 'guard', '~> 2.12.5'
 gem 'spring'
 gem 'byebug'
 gem 'pry-byebug'
 gem 'guard-rspec'
-gem 'guard-spring'
-gem 'fuubar', github: 'thekompanee/fuubar'
+gem 'fuubar'
 gem 'foreman'
 gem 'yard'
 gem 'redcarpet'
