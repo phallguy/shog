@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/shog.svg)](http://badge.fury.io/rb/shog)
 [![Code Climate](https://codeclimate.com/github/phallguy/shog.png)](https://codeclimate.com/github/phallguy/shog)
-
+[![Circle CI](https://circleci.com/gh/phallguy/shog.svg?style=svg)](https://circleci.com/gh/phallguy/shog)
 
 Make rails 4.0 log details more colorful.
 
