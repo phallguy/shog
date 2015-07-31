@@ -12,7 +12,7 @@ module Shog
           severity_tag( :debug ) { |msg| msg.black.bold }
           severity_tag( :warn  ) { |msg| msg.yellow }
           severity_tag( :error ) { |msg| msg.red }
-          severity_tag( :fatal ) { |msg| msg.white_on_red }
+          severity_tag( :fatal ) { |msg| msg.white.on_red }
 
           severity( :error ){ |msg| msg.red }
           severity( :fatal ){ |msg| msg.red }
