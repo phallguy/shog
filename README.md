@@ -4,7 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/phallguy/shog.png)](https://codeclimate.com/github/phallguy/shog)
 [![Circle CI](https://circleci.com/gh/phallguy/shog.svg?style=svg)](https://circleci.com/gh/phallguy/shog)
 
-(Also check our [scorpion](http://github.com/phallguy/scorpion) for a light-weight IoC container)
+(Also check [scorpion](http://github.com/phallguy/scorpion) for a light-weight IoC container)
 
 Make rails 4.0 log details more colorful.
 
