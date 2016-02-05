@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'rails', '~> 5.0'
+  spec.add_dependency 'rails', '>= 5.0.0.beta2'
   spec.add_dependency 'colored', '~> 1.2'
   spec.required_ruby_version = '>= 1.9.2'
 
