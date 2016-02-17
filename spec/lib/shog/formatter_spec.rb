@@ -109,6 +109,15 @@ describe Shog::Formatter do
       result = formatter.call "INFO", Time.now, nil, "Started GET \"/Home\""
       expect( result ).to eq "DEFAULT\n"
     end
+
+    it "matches already colored lines" do
+      formatter.match /A\sB/ do |msg, match|
+        "Title"
+      end
+
+      result = formatter.call "INFO", Time.now, nil, "Colored #{ "A".red } #{ "B".green }"
+      expect( result ).to eq "Title\n"
+    end
   end
 
   describe "#silence" do

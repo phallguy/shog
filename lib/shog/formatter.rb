@@ -275,6 +275,7 @@ module Shog
       attr_accessor :configuration
 
       def _matched( msg )
+        msg = msg.uncolorize
         if matched =  configuration[:matchers].find do |pattern,_|
                         pattern === msg
                       end
