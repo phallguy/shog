@@ -1,5 +1,5 @@
 require 'active_support/tagged_logging'
-require 'colored'
+require 'colorize'
 
 module Shog
 
