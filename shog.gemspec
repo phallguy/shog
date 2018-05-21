@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = "#{Shog::VERSION}"
   spec.authors       = ["Paul Alexander"]
   spec.email         = ["me@phallguy.com"]
-  spec.summary       = %q{Make rails 4.0 and 5.0 log details more colorful}
-  spec.description   = %q{More than just colorful tags, make rails logged info easy to read and easy to spot.}
+  spec.summary       = %q{Simple colored logging for rails 4 and 5 apps}
+  spec.description   = %q{More than just colorful tags, make rails logged info easy to read and understand.}
   spec.homepage      = "https://github.com/phallguy/shog"
   spec.license       = "MIT"
 

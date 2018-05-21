@@ -6,7 +6,7 @@
 
 (Also check [scorpion](http://github.com/phallguy/scorpion) for a light-weight IoC container)
 
-Make rails 5.0 log details more colorful.
+Simple colored logging for rails 4 and 5 apps.
 
 There are plenty of logging frameworks for making tags (like timestamp, log
 level, etc.) more colorful - but what about the details in the line of text?

@@ -1,5 +1,5 @@
 module Shog
-  VERSION_NUMBER  = "0.2.0"
+  VERSION_NUMBER  = "0.2.1"
   VERSION_SUFFIX  = ""
   VERSION         = "#{VERSION_NUMBER}#{VERSION_SUFFIX}"
 end
